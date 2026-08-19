@@ -1,19 +1,21 @@
-import React from "react";
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Lenis from "lenis";
-import Navbar from './components/Navbar.jsx';
-import Hero from './components/Hero.jsx';
+
+import Navbar from "./components/Navbar.jsx";
+import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
 import Projects from "./components/Projects.jsx";
 import Expertise from "./components/Expertise.jsx";
-import Contact from "./components/Contact.jsx";
 import Services from "./components/Services.jsx";
+import Contact from "./components/Contact.jsx";
 import Loader from "./components/Loader.jsx";
 
 function App() {
-   useEffect(() => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.8,      // Increase for slower scroll
+      duration: 1.8,
       smoothWheel: true,
       touchMultiplier: 1,
     });
@@ -28,18 +30,21 @@ function App() {
     return () => lenis.destroy();
   }, []);
 
-
   return (
     <>
-    <Loader />
-    <Navbar />
-    <Hero />
-    <About />
-    <Projects />
-    <Expertise />
-    <Services />
-    <Contact />
+      <Loader onComplete={() => setIsLoading(false)} />
+
+      <Navbar />
+
+      <Hero isLoading={isLoading} />
+
+      <About />
+      <Projects />
+      <Expertise />
+      <Services />
+      <Contact />
     </>
-  )
+  );
 }
+
 export default App;

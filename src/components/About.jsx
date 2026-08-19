@@ -20,7 +20,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="mx-6 flex flex-col md:mx-24 md:flex-row md:justify-between p-20 md:py-32"
+      className="mx-6 flex flex-col gap-14 py-20 md:mx-24 md:flex-row md:justify-between p-20 md:py-32"
     >
       {/* LEFT COLUMN */}
       <motion.div
@@ -28,10 +28,10 @@ const About = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.1 }}
-        className="mt-10 text-2xl md:w-100 font-mono"
+        className="mt-0 width-full text-2xl md:w-100 font-mono"
       >
         ABOUT ME
-        <div className="mt-4 w-80 md:mt-10">
+        <div className="mt-6 w-full max-w-[320px] md:mt-10 md:w-80">
           <img
             src={profile}
             alt="Profile"
@@ -46,9 +46,9 @@ const About = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
-        className="mt-10 w-full md:mt-0 md:ml-auto md:w-[40%]"
+        className="mt-0 w-full md:mt-0 md:ml-auto md:w-[40%]"
       >
-        <h1 className="font-roboto text-3xl leading-tight md:text-5xl">
+        <h1 className="font-roboto text-3xl leading-[1.1] tracking-tight sm:text-4xl md:text-5xl md:leading-tight">
           Hi, I'm <span className="text-black">Raihan</span>,
           <br />
           <span>web developer based in India.</span>
@@ -59,7 +59,7 @@ const About = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          className="mt-8 text-base font-semibold leading-relaxed text-gray-600 md:mt-10 md:text-lg"
+          className="mt-6 text-base font-semibold leading-relaxed text-gray-600 md:mt-10 md:text-lg"
         >
           I build fast, responsive, and user-focused web applications using
           modern technologies like React, JavaScript, and Node.js. I care about
@@ -69,7 +69,7 @@ const About = () => {
 
         {/* Button */}
         <motion.button
-          className="relative mt-8 mb-8 h-12 w-32 cursor-pointer overflow-hidden rounded-xl bg-gray-200 font-roboto font-medium text-black md:mt-10"
+          className="relative mt-8 mb-0 h-12 w-32 cursor-pointer overflow-hidden rounded-xl bg-gray-200 font-roboto font-medium text-black md:mt-10"
         >
           Start project
         </motion.button>
