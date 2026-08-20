@@ -83,15 +83,16 @@ function Hero() {
             opacity: contentOpacity,
           }}
           className="flex items-center gap-3 whitespace-nowrap
-                     md:relative md:left-75 md:top-30"
+                     md:relative md:left-35 md:top-30"
         >
           <div className="w-6 h-6 sm:w-8 sm:h-8">
             <Globe />
           </div>
-
-          <p className="text-base text-white sm:text-xl">
+          <div>
+          <p className="text-base text-white sm:text-xl md:text-2xl">
             Mumbai, India
           </p>
+          </div>
         </motion.div>
       </div>
 
