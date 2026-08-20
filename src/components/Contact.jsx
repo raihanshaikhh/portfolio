@@ -107,7 +107,7 @@ function Contact() {
     items-center
     justify-center
     gap-3
-    rounded-xl
+    rounded-full
     bg-[#e2e2e2]
     px-6
     text-sm
@@ -287,7 +287,7 @@ function Contact() {
               leading-[0.72]
               tracking-[-0.08em]
               text-black
-              md:text-[13vw]
+              md:text-[16vw]
             "
                     >
                         RAIHAN SHAIKH

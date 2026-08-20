@@ -130,19 +130,21 @@ const About = () => {
             relative
             mt-8
             mb-0
-            h-12
-            w-32
+            h-14
+            w-34
             cursor-pointer
             overflow-hidden
-            rounded-xl
+            rounded-full
             bg-gray-200
             font-roboto
             font-medium
             text-black
             transition-colors
-            hover:bg-gray-300
+            hover:bg-black
+            hover:text-white
             md:mt-10
             md:mb-8
+            md:p-2
           "
         >
           Start project
