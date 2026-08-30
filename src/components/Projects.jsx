@@ -13,18 +13,9 @@ const projects = [
     image: "/projects/flow.jpg",
     link: "https://project-management-webapp-cufm.vercel.app/",
   },
+
   {
     number: "02",
-    title: "FitTrack",
-    category: "Fitness & Wellness Website",
-    description:
-      "A responsive dashboard to track workouts, progress, and daily activity with clean data visualizations.",
-    tags: ["React", "Chart.js", "Tailwind CSS", "Express"],
-    image: "/projects/moderngym.jpg",
-    link: "https://moderngymlandingpage.netlify.app/",
-  },
-  {
-    number: "03",
     title: "World Beauty",
     category: "E-commerce Storefront",
     description:
@@ -34,7 +25,7 @@ const projects = [
     link: "https://www.worldbeauty.in/",
   },
   {
-    number: "04",
+    number: "03",
     title: "Student Management System",
     category: "Admin Portal",
     description:
@@ -95,23 +86,48 @@ function ProjectRow({ project, isActive, isDimmed, onEnter, onLeave }) {
       </div>
 
       {/* Mobile */}
+      {/* Mobile */}
       <div className="md:hidden">
         <div className="flex items-center justify-between">
-          <span className="font-mono text-[11px] tracking-[0.2em]" style={{ color: ACCENT }}>
+          <span
+            className="font-mono text-[11px] tracking-[0.2em]"
+            style={{ color: ACCENT }}
+          >
             {project.number}
           </span>
+
           <span className="text-[10px] uppercase tracking-[0.12em] text-white/35">
             {project.category}
           </span>
         </div>
 
-        <h3 className="mt-2 font-space text-2xl font-medium tracking-[-0.02em] text-white">
+        <h3 className="mt-3 font-space text-2xl font-medium tracking-[-0.02em] text-white">
           {project.title}
         </h3>
 
+        {/* Description */}
+        <p className="mt-3 max-w-md text-sm leading-relaxed text-white/55">
+          {project.description}
+        </p>
+
+        {/* Tags */}
+        <div className="mt-4 flex flex-wrap gap-2">
+          {project.tags.map((tag) => (
+            <span
+              key={tag}
+              className="rounded-full border border-white/10 px-3 py-1 text-[10px] tracking-wide text-white/50"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        {/* Project Image */}
         <a
           href={project.link}
-          className="mt-4 block overflow-hidden rounded-lg border border-white/10"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-5 block overflow-hidden rounded-lg border border-white/10"
         >
           <motion.img
             src={project.image}
@@ -119,6 +135,23 @@ function ProjectRow({ project, isActive, isDimmed, onEnter, onLeave }) {
             whileTap={{ scale: 0.98 }}
             className="aspect-[16/10] w-full object-cover"
           />
+        </a>
+
+        {/* View Project */}
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 flex items-center justify-between text-sm text-white/60"
+        >
+          <span>View Project</span>
+
+          <span
+            className="flex h-8 w-8 items-center justify-center rounded-full border border-white/20"
+            style={{ color: ACCENT }}
+          >
+            ↗
+          </span>
         </a>
       </div>
 

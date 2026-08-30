@@ -137,6 +137,11 @@ function Hero() {
         </motion.p>
 
         <motion.button
+        onClick={()=>{
+          document.getElementById("projects")?.scrollIntoView({
+            behavior:"smooth"
+          })
+        }}
           style={{
             y: buttonY,
             opacity: contentOpacity,
@@ -149,7 +154,7 @@ function Hero() {
           }}
           className="btn btn-white btn-animated w-full sm:w-auto"
         >
-          Start Project
+          See Work
         </motion.button>
       </div>
     </motion.section>
