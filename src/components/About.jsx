@@ -147,7 +147,7 @@ const About = () => {
             md:p-2
           "
         >
-          Start Now yes
+          Start a project
         </motion.button>
       </motion.div>
     </section>
